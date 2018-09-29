@@ -6,3 +6,4 @@
 .idea/workspace.xml
 __pycache__/*
 image_utility.egg-info/*
+__pycache__/main.cpython-36.pyc

@@ -3,12 +3,11 @@ from os.path import join, dirname
 from setuptools import setup, find_packages
 
 # reading package version (same way the sqlalchemy does)
-with open(join(dirname(__file__), 'image-utility', '__init__.py')) as v_file:
+with open(join(dirname(__file__), '__init__.py')) as v_file:
     package_version = re.compile(r".*__version__ = '(.*?)'", re.S).match(v_file.read()).group(1)
 
 
 dependencies = [
-    'tkinter',
     'opencv-python',
 ]
 
@@ -21,8 +20,8 @@ setup(
     install_requires=dependencies,
     entry_points={
         'console_scripts': [
-            'image-utility = image-utility.cli:main'
-        ]
+            'image-utility = main:main'
+        ],
     },
     packages=find_packages(),
 )

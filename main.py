@@ -37,6 +37,8 @@ class ImageUtility:
                 self.copy_image = self.image.copy()
                 self.reset()
             elif k == ord('z'):
+                self.first_point = None
+                print('undo')
                 self.undo()
                 self.copy_image = self.image.copy()
             elif k == ord('+'):

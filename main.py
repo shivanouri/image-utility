@@ -9,7 +9,6 @@ class ImageUtility:
         self.finish = False
         self.image = image
         self.copy_image = self.image.copy()
-        self.zoom = False
         self.rectangles = []
         self.first_point = None
         self.second_point = None
@@ -41,10 +40,6 @@ class ImageUtility:
                 print('undo')
                 self.undo()
                 self.copy_image = self.image.copy()
-            elif k == ord('+'):
-                self.zoom = True
-            elif k == ord('-'):
-                self.zoom = False
 
         cv2.destroyAllWindows()
 
@@ -95,7 +90,7 @@ class ImageUtility:
                 (0, 255, 0),
                 self.thickness
             )
-            if self.x_start == self.x_end and self.y_start == self.y_end and self.zoom:
+            if self.x_start == self.x_end and self.y_start == self.y_end:
                 if self.first_point:
                     self.second_point = (x, y)
                     cv2.rectangle(

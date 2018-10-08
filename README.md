@@ -13,9 +13,11 @@ Each time you could pass a path of image.
 
 ## How does it work
 Mouse for drawing rectangle.
-Esc : stoping.
-z : undo.
-r : reset.
+- Esc : stoping.
+- z : undo.
+- r : reset.
+- '+' : zoom-in
+- '-' : Get out of zoom.
 
 ## Project Setup, Setting up development Environment on Ubuntu:
 

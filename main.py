@@ -18,7 +18,7 @@ class ImageUtility:
         self.thickness = 1 + height//1000
 
     def select_image(self):
-        cv2.namedWindow('image', 0)
+        cv2.namedWindow('image', flags=cv2.WINDOW_FREERATIO)
         cv2.resizeWindow('image', 1400, 2000)
         cv2.setMouseCallback('image', self.draw_rectangle)
 
@@ -107,7 +107,7 @@ class ImageUtility:
                          self.second_point[1])
                     )
                     print(
-                        f'Location ({self.first_point[0]},'
+                        f'Location({self.first_point[0]},'
                         f' {self.first_point[1]},'
                         f' {abs(self.second_point[0]-self.first_point[0])},'
                         f' {abs(self.second_point[1]-self.first_point[1])})'

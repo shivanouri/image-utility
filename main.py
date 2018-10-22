@@ -112,6 +112,7 @@ class ImageUtility:
                         f' {abs(self.second_point[0]-self.first_point[0])},'
                         f' {abs(self.second_point[1]-self.first_point[1])})'
                     )
+                    print(f'{{x: {self.first_point[0] }, y: {self.first_point[1]}, w: {abs(self.second_point[0]-self.first_point[0])}, z: {abs(self.second_point[1]-self.first_point[1])}}}')
                     self.first_point = None
                     self.second_point = None
                 else:

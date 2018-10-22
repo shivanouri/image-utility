@@ -131,11 +131,12 @@ class ImageUtility:
                      self.y_end)
                 )
                 print(
-                    f'Location ({self.x_start},'
+                    f'Location({self.x_start},'
                     f' {self.y_start},'
                     f' {abs(self.x_end-self.x_start)},'
                     f' {abs(self.y_end-self.y_start)})'
                 )
+                print(f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, z: {abs(self.y_end-self.y_start)}}}')
 
 
 def main():

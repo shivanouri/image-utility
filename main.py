@@ -112,7 +112,7 @@ class ImageUtility:
                         f' {abs(self.second_point[0]-self.first_point[0])},'
                         f' {abs(self.second_point[1]-self.first_point[1])})'
                     )
-                    print(f'{{x: {self.first_point[0] }, y: {self.first_point[1]}, w: {abs(self.second_point[0]-self.first_point[0])}, z: {abs(self.second_point[1]-self.first_point[1])}}}')
+                    print(f'{{x: {self.first_point[0] }, y: {self.first_point[1]}, w: {abs(self.second_point[0]-self.first_point[0])}, h: {abs(self.second_point[1]-self.first_point[1])}}}')
                     self.first_point = None
                     self.second_point = None
                 else:
@@ -137,7 +137,7 @@ class ImageUtility:
                     f' {abs(self.x_end-self.x_start)},'
                     f' {abs(self.y_end-self.y_start)})'
                 )
-                print(f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, z: {abs(self.y_end-self.y_start)}}}')
+                print(f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, h: {abs(self.y_end-self.y_start)}}}')
 
 
 def main():

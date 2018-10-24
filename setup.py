@@ -9,8 +9,8 @@ with open(join(dirname(__file__), '__init__.py')) as v_file:
 
 dependencies = [
     'opencv-python',
+    'pyperclip'
 ]
-
 
 setup(
     name="image utility",

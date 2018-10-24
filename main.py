@@ -56,7 +56,7 @@ class ImageUtility:
                 cv2.rectangle(
                     self.image,
                     (rectangle[0], rectangle[1]), (rectangle[2], rectangle[3]),
-                    (0, 255, 0),
+                    (255, 0, 255),
                     self.thickness
                 )
         else:
@@ -74,7 +74,7 @@ class ImageUtility:
                     self.copy_image,
                     (self.x_start, self.y_start),
                     (x, y),
-                    (0, 255, 0),
+                    (255, 0, 255),
                     self.thickness
                 )
 
@@ -87,7 +87,7 @@ class ImageUtility:
                 self.image,
                 (self.x_start, self.y_start),
                 (x, y),
-                (0, 255, 0),
+                (255, 0, 255),
                 self.thickness
             )
             if self.x_start == self.x_end and self.y_start == self.y_end:
@@ -97,7 +97,7 @@ class ImageUtility:
                         self.image,
                         self.first_point,
                         self.second_point,
-                        (0, 255, 0),
+                        (255, 0, 255),
                         self.thickness
                     )
                     self.rectangles.append(
@@ -126,7 +126,7 @@ class ImageUtility:
                     self.image,
                     (self.x_start, self.y_start),
                     (x, y),
-                    (0, 255, 0),
+                    (255, 0, 255),
                     self.thickness
                 )
                 self.rectangles.append(

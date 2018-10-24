@@ -1,4 +1,5 @@
 import argparse
+import pyperclip
 
 import cv2
 
@@ -106,17 +107,18 @@ class ImageUtility:
                          self.second_point[0],
                          self.second_point[1])
                     )
-                    import pyperclip
-                    pyperclip.copy(
-                        f'{{x: {self.first_point[0] }, y: {self.first_point[1]}, w: {abs(self.second_point[0]-self.first_point[0])}, h: {abs(self.second_point[1]-self.first_point[1])}}}')
-                    spam = pyperclip.paste()
-                    print(
-                        f'Location({self.first_point[0]},'
-                        f' {self.first_point[1]},'
-                        f' {abs(self.second_point[0]-self.first_point[0])},'
-                        f' {abs(self.second_point[1]-self.first_point[1])})'
-                    )
-                    print(f'{{x: {self.first_point[0] }, y: {self.first_point[1]}, w: {abs(self.second_point[0]-self.first_point[0])}, h: {abs(self.second_point[1]-self.first_point[1])}}}')
+
+                    if self.second_point[0]-self.first_point[0] > 0:
+                        x = self.first_point[0]
+                        y = self.first_point[1]
+                    else:
+                        x = self.second_point[0]
+                        y = self.second_point[1]
+                    w = abs(self.second_point[0]-self.first_point[0])
+                    h = abs(self.second_point[1]-self.first_point[1])
+                    pyperclip.copy(f'{{x: {x }, y: {y}, w: {w}, h: {h}}}')
+                    print(f'Location({x}, {y}, {w}, {h})')
+                    print(f'{{x: {x}, y: {y}, w: {w}, h: {h}}}')
                     self.first_point = None
                     self.second_point = None
                 else:
@@ -135,16 +137,17 @@ class ImageUtility:
                      self.x_end,
                      self.y_end)
                 )
-                import pyperclip
-                pyperclip.copy(f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, h: {abs(self.y_end-self.y_start)}}}')
-                spam = pyperclip.paste()
-                print(
-                    f'Location({self.x_start},'
-                    f' {self.y_start},'
-                    f' {abs(self.x_end-self.x_start)},'
-                    f' {abs(self.y_end-self.y_start)})'
-                )
-                print(f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, h: {abs(self.y_end-self.y_start)}}}')
+                if self.x_end-self.x_start > 0:
+                    x = self.x_start
+                    y = self.y_start
+                else:
+                    x = self.x_end
+                    y = self.y_end
+                w = abs(self.x_end - self.x_start)
+                h = abs(self.y_end - self.y_start)
+                pyperclip.copy(f'{{x: {x }, y: {y}, w: {w}, h: {h}}}')
+                print(f'Location({x}, {y}, {w}, {h})')
+                print(f'{{x: {x}, y: {y}, w: {w}, h: {h}}}')
 
 
 def main():

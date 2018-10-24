@@ -108,7 +108,7 @@ class ImageUtility:
                     )
                     import pyperclip
                     pyperclip.copy(
-                        f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, h: {abs(self.y_end-self.y_start)}}}')
+                        f'{{x: {self.first_point[0] }, y: {self.first_point[1]}, w: {abs(self.second_point[0]-self.first_point[0])}, h: {abs(self.second_point[1]-self.first_point[1])}}}')
                     spam = pyperclip.paste()
                     print(
                         f'Location({self.first_point[0]},'

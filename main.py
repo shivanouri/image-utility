@@ -117,6 +117,7 @@ class ImageUtility:
                     w = abs(self.second_point[0]-self.first_point[0])
                     h = abs(self.second_point[1]-self.first_point[1])
                     pyperclip.copy(f'{{x: {x }, y: {y}, w: {w}, h: {h}}}')
+                    spam = pyperclip.paste()
                     print(f'Location({x}, {y}, {w}, {h})')
                     print(f'{{x: {x}, y: {y}, w: {w}, h: {h}}}')
                     self.first_point = None
@@ -148,6 +149,7 @@ class ImageUtility:
                 pyperclip.copy(f'{{x: {x }, y: {y}, w: {w}, h: {h}}}')
                 print(f'Location({x}, {y}, {w}, {h})')
                 print(f'{{x: {x}, y: {y}, w: {w}, h: {h}}}')
+                spam = pyperclip.paste()
 
 
 def main():

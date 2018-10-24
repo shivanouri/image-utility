@@ -106,6 +106,10 @@ class ImageUtility:
                          self.second_point[0],
                          self.second_point[1])
                     )
+                    import pyperclip
+                    pyperclip.copy(
+                        f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, h: {abs(self.y_end-self.y_start)}}}')
+                    spam = pyperclip.paste()
                     print(
                         f'Location({self.first_point[0]},'
                         f' {self.first_point[1]},'
@@ -131,6 +135,9 @@ class ImageUtility:
                      self.x_end,
                      self.y_end)
                 )
+                import pyperclip
+                pyperclip.copy(f'{{x: {self.x_start }, y: {self.y_start}, w: {abs(self.x_end-self.x_start)}, h: {abs(self.y_end-self.y_start)}}}')
+                spam = pyperclip.paste()
                 print(
                     f'Location({self.x_start},'
                     f' {self.y_start},'
